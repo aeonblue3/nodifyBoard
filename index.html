@@ -2,15 +2,30 @@
 <html>
 	<head>
 		<title>Nodify Board</title>
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<div id="chatterBox">
-			
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var server io.connect('http://localhost:8080');
+			server.on('messages', function(data){
+				alert(data.hello);
+			});
+		</script>
+		<div id="chatterBox" class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2">Hello</div>
+				<div class="span8">
+
+
+				</div>
+				<div class="span2">Hello</div>
+			</div>
 		</div>
 	</body>
 </html>

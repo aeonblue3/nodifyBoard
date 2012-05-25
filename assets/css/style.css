@@ -1,0 +1,12 @@
+/**
+ * The ChatterBox chat system
+ */
+body {
+	color: #efefef;
+	background: #010101;
+}
+#chatterBox .row-fluid div {
+	border-radius: 4px;
+	border: 1px solid #222;
+	background: #222;
+}
