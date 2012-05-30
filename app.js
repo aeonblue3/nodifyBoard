@@ -10,7 +10,10 @@ app.get('/', function(request, response){
 });
 io.sockets.on('connection', function(client){
 	console.log("Client Connected...");
-	client.emit('message', {hello: 'world'});
+//	client.emit('message', {hello: 'world'});
+	client.on('messages', function(data) {
+		console.log(data);
+	})
 });
 
 app.listen(8080);
