@@ -8,6 +8,10 @@ var io = socket.listen(app);
 app.get('/', function(request, response){
 	response.sendfile(__dirname + "/index.html");
 });
+
+app.get('/chat', function(request, response){
+	response.render('chat.ejs');
+});
 io.sockets.on('connection', function(client){
 	console.log("Client Connected...");
 //	client.emit('message', {hello: 'world'});
